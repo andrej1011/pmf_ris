@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="izvestajPregleda" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="30" bottomMargin="30" uuid="7001b75b-3777-49fd-b65a-36e7a485400a">
+	<property name="net.sf.jasperreports.default.font.name" value="DejaVu Sans"/>
+	<property name="net.sf.jasperreports.default.pdf.font.name" value="DejaVu Sans"/>
+	<property name="net.sf.jasperreports.default.pdf.encoding" value="UTF-8"/>
+	<property name="net.sf.jasperreports.default.pdf.embedded" value="true"/>
+	<style name="BaseStyle" isDefault="true" fontName="DejaVu Sans" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<parameter name="doktorIme" class="java.lang.String"/>
+	<parameter name="doktorSpecijalizacija" class="java.lang.String"/>
+	<parameter name="odeljenje" class="java.lang.String"/>
+	<parameter name="pacijentIme" class="java.lang.String"/>
+	<parameter name="jmbg" class="java.lang.String"/>
+	<parameter name="adresa" class="java.lang.String"/>
+	<parameter name="lbo" class="java.lang.String"/>
+	<parameter name="brojProtokola" class="java.lang.String"/>
+	<parameter name="datumVreme" class="java.util.Date"/>
+	<parameter name="vremeZavrsetka" class="java.util.Date"/>
+	<parameter name="nalaz" class="java.lang.String"/>
+	<parameter name="dijagnoze" class="java.lang.String"/>
+	<title>
+		<band height="280">
+			<rectangle>
+				<reportElement x="0" y="0" width="515" height="60" uuid="59e12460-2bc2-4ce2-9ec9-ff36e51ce333"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#1A3A5C"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="5" width="250" height="14" uuid="1fd5d4c3-98f8-47e4-837f-5e73a388cc08"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IZVEŠTAJ LEKARA SPECIJALISTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="5" y="20" width="250" height="12" uuid="7ab3ba7a-d147-4542-a930-a49b3511c450"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{odeljenje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="34" width="250" height="12" uuid="2833f4b5-f263-4e6d-b738-73189a4ff04f"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Služba " + $P{odeljenje}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="60" width="515" height="90" uuid="b0ea4d9a-23ee-4944-8a69-7ee38ceaab10"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="65" width="80" height="12" uuid="f0016d7c-4575-42ee-ad87-74e1b6faaa3b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Broj protokola:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="65" width="200" height="12" uuid="9bd3105c-f9e4-4b48-8238-9e14ed8764ea"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{brojProtokola}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="79" width="80" height="12" uuid="76c4b118-c26f-4ac0-9aa5-235f18415185"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JMBG:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="79" width="200" height="12" uuid="fc5d0822-abb7-4262-a6b6-62715265b541"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jmbg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="93" width="80" height="12" uuid="2f47d234-51f5-4120-8848-2ffa1408363f"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="93" width="300" height="12" uuid="08f17b2c-cdff-4787-9ff7-456b16680fb4"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresa} != null ? $P{adresa} : "-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="107" width="80" height="12" uuid="f24c7b1c-d425-4477-8155-cb5e875f3c4a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LBO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="107" width="200" height="12" uuid="51973c5b-c6ad-4a28-a1fd-2775ebbb4146"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lbo} != null ? $P{lbo} : "-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="121" width="80" height="12" uuid="3419ed5c-d02b-4cd6-8a94-6987c0b446c5"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vreme prijave:]]></text>
+			</staticText>
+			<textField pattern="dd.MM.yyyy. HH:mm">
+				<reportElement x="90" y="121" width="200" height="12" uuid="c5c3c888-4845-4c4f-b0a8-e4ac0740beb1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{datumVreme}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="135" width="80" height="12" uuid="0cebf20f-cbc6-420c-91e2-34d8f435c282"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vreme završetka:]]></text>
+			</staticText>
+			<textField pattern="dd.MM.yyyy. HH:mm">
+				<reportElement x="90" y="135" width="200" height="12" uuid="d91d9298-d77b-4fa0-bb80-2cdd4ccd1f1c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vremeZavrsetka}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="158" width="515" height="20" forecolor="#1A3A5C" uuid="9d47b185-ec6b-4c8d-8288-b1ce782036d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IZVEŠTAJ LEKARA SPECIJALISTE]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="180" width="515" height="20" uuid="1bed4e21-89e9-40e1-a24d-584a9d5304b8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="184" width="60" height="12" uuid="7e21c415-00ef-4caf-bda2-2c2c91d1a167"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PACIJENT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="184" width="300" height="12" uuid="ab80be70-b4d0-4423-897a-c736ca710290"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pacijentIme}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="200" width="515" height="20" uuid="3f8ea15a-6f07-4157-a603-ce2f3b90f9dd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="204" width="60" height="12" uuid="9325cdc0-4331-45b4-99fd-25c78842a6f5"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dijagnoze:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="70" y="204" width="440" height="12" forecolor="#CC0000" uuid="6e412c8e-2d55-42ca-aa72-cbdab5f3e1b9"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dijagnoze}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="228" width="515" height="14" uuid="865fe9a3-9be5-4270-a206-094c06a5ba1c"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nalaz:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band/>
+	</detail>
+	<summary>
+		<band height="420">
+			<rectangle>
+				<reportElement x="0" y="0" width="515" height="300" uuid="e27276b3-6ca2-4603-a179-c0151db4f4a7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+				</graphicElement>
+			</rectangle>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="5" y="5" width="505" height="290" uuid="c9131db0-9e84-4e0d-986f-58213874927b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nalaz} != null ? $P{nalaz} : ""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="310" width="515" height="1" uuid="926710db-a549-4793-8f1e-060298edd148"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd.MM.yyyy.">
+				<reportElement x="0" y="320" width="120" height="14" uuid="9a21c25e-3d57-4b8c-9c97-a027cdb0d83d"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vremeZavrsetka}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="316" width="215" height="14" uuid="073300aa-5329-422f-9659-581d0d858fe5"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Potpis i faksimil lekara:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="332" width="215" height="14" uuid="52b69905-a423-4fe1-be80-53049075e670"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dr. " + $P{doktorIme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="347" width="215" height="14" uuid="6b632fc5-9036-476f-b6f2-97fe0e0201c7"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["spec. " + ($P{doktorSpecijalizacija} != null ? $P{doktorSpecijalizacija} : "")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="408" width="115" height="12" forecolor="#888888" uuid="a6f3303b-a42e-4b28-8841-131fec1d1ee6"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Strana]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="315" y="408" width="30" height="12" forecolor="#888888" uuid="d57d2220-3d25-429c-85e4-82c4e1e5c8c8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

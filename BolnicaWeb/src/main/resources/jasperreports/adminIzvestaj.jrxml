@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adminIzvestaj" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="30" bottomMargin="30" uuid="67c5733e-c96c-478b-a6df-ec9bf42bf900">
+	<property name="net.sf.jasperreports.default.font.name" value="DejaVu Sans"/>
+	<property name="net.sf.jasperreports.default.pdf.font.name" value="DejaVu Sans"/>
+	<property name="net.sf.jasperreports.default.pdf.encoding" value="UTF-8"/>
+	<property name="net.sf.jasperreports.default.pdf.embedded" value="true"/>
+	<style name="BaseStyle" isDefault="true" fontName="DejaVu Sans" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<parameter name="topDoktori" class="java.lang.String"/>
+	<parameter name="listaCekanja" class="java.lang.String"/>
+	<parameter name="preglediPoStatusu" class="java.lang.String"/>
+	<parameter name="noviPacijenti" class="java.lang.String"/>
+	<parameter name="gdprPoTipu" class="java.lang.String"/>
+	<parameter name="datumIzvestaja" class="java.lang.String"/>
+	<title>
+		<band height="680">
+			<rectangle>
+				<reportElement x="0" y="0" width="515" height="40" uuid="8b92ee7b-fdc2-4918-9f08-3ded82652cdf"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#1A3A5C"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="8" width="505" height="24" uuid="f90d89e2-5288-4d17-9c5b-58681bd1d035"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MESEČNI IZVEŠTAJ AKTIVNOSTI BOLNICE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="44" width="515" height="14" uuid="4649d175-e5da-4d49-ab93-05d8ca0b5f71"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{datumIzvestaja}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="515" height="16" forecolor="#1A3A5C" uuid="610deae9-0c80-4fae-a81b-2d0d6041a8d7"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAJBOLJIH 5 DOKTORA PO BROJU ZAVRŠENIH PREGLEDA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="86" width="515" height="1" uuid="72b9414c-3e86-4597-b5a5-11083338ef57"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="92" width="515" height="80" uuid="999e1755-a207-4868-80ea-fed062d57cc3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{topDoktori} != null ? $P{topDoktori} : "Nema podataka"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="185" width="515" height="16" forecolor="#1A3A5C" uuid="ea633cca-b51b-4503-bd4f-df6ca3469fd4"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOP 5 DOKTORA SA NAJDUŽOM LISTOM ČEKANJA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="201" width="515" height="1" uuid="b11aa5de-4a0c-4560-8924-5fe2b557180e"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="207" width="515" height="80" uuid="93fc79b7-fa9f-4dfe-901c-48289c73efbc"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{listaCekanja} != null ? $P{listaCekanja} : "Nema podataka"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="300" width="515" height="16" forecolor="#1A3A5C" uuid="2a514982-a607-4980-893f-8b7657b79065"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BROJ PREGLEDA PO STATUSU]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="316" width="515" height="1" uuid="06adcf9f-649d-4304-a599-fb587b830e76"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="322" width="515" height="60" uuid="df97f82e-e2b8-4b11-bb31-ec61a570721e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{preglediPoStatusu} != null ? $P{preglediPoStatusu} : "Nema podataka"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="395" width="515" height="16" forecolor="#1A3A5C" uuid="1fb14f41-e8d1-42a7-af07-7aa963f99759"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UKUPAN BROJ PACIJENATA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="411" width="515" height="1" uuid="ffb369cb-716f-4273-adfd-44616d1b9216"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="417" width="515" height="20" uuid="1a107150-2912-458a-86f8-255f2e8110ae"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ukupno registrovanih pacijenata: " + $P{noviPacijenti}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="450" width="515" height="16" forecolor="#1A3A5C" uuid="e20ca245-4f82-461d-b3ab-5ea11df51250"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GDPR ZAHTEVI PO TIPU]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="466" width="515" height="1" uuid="a39b3640-7593-49e5-94d4-c803ef58d3b9"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="472" width="515" height="80" uuid="ea276a53-1146-4d32-b389-085f12d5ad57"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gdprPoTipu} != null ? $P{gdprPoTipu} : "Nema podataka"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band/>
+	</detail>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="gdprIzvoz" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="30" bottomMargin="30" uuid="43eabb20-7a73-45d7-b40a-cd79a22791c7">
+	<property name="net.sf.jasperreports.default.font.name" value="DejaVu Sans"/>
+	<property name="net.sf.jasperreports.default.pdf.font.name" value="DejaVu Sans"/>
+	<property name="net.sf.jasperreports.default.pdf.encoding" value="UTF-8"/>
+	<property name="net.sf.jasperreports.default.pdf.embedded" value="true"/>
+	<style name="BaseStyle" isDefault="true" fontName="DejaVu Sans" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<parameter name="ime" class="java.lang.String"/>
+	<parameter name="prezime" class="java.lang.String"/>
+	<parameter name="imeOca" class="java.lang.String"/>
+	<parameter name="jmbg" class="java.lang.String"/>
+	<parameter name="lbo" class="java.lang.String"/>
+	<parameter name="pol" class="java.lang.String"/>
+	<parameter name="datumRodjenja" class="java.lang.String"/>
+	<parameter name="adresa" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="telefon" class="java.lang.String"/>
+	<parameter name="osiguran" class="java.lang.String"/>
+	<parameter name="krvnaGrupa" class="java.lang.String"/>
+	<parameter name="alergije" class="java.lang.String"/>
+	<parameter name="hronicanBolesnik" class="java.lang.String"/>
+	<parameter name="napomenaKarton" class="java.lang.String"/>
+	<parameter name="pregledi" class="java.lang.String"/>
+	<parameter name="recepti" class="java.lang.String"/>
+	<parameter name="datumIzvoza" class="java.lang.String"/>
+	<title>
+		<band height="740">
+			<rectangle>
+				<reportElement x="0" y="0" width="515" height="40" uuid="bd8917fe-63f4-43c2-8205-1472d7a3b1b0"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#1A3A5C"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="8" width="505" height="24" uuid="5ed6ecc2-56e7-4ea4-8145-f9d33693fda5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GDPR IZVOZ PODATAKA O PACIJENTU]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="44" width="515" height="14" uuid="82b4a382-2b35-4445-b925-a3a942ab5a05"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Datum izvoza: " + $P{datumIzvoza}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="66" width="515" height="16" forecolor="#1A3A5C" uuid="a598c52b-5ed0-4814-883a-728faac76e41"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIČNI PODACI]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="82" width="515" height="1" uuid="c326bd49-a017-4f2c-a9bd-fd9316358544"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="88" width="150" height="13" uuid="70b89f2d-0b7c-48aa-aa8b-af119cf320a6"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ime i prezime:]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="155" y="88" width="360" height="13" uuid="b82903f6-c428-4fdd-be8a-d86ed63877b2"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ime} + " " + $P{prezime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="103" width="150" height="13" uuid="b38de355-0aba-4937-ac2b-7f0c2de43aa6"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ime oca:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="103" width="360" height="13" uuid="3ee40124-d406-4dea-a2b3-9befbe78b44f"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{imeOca}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="118" width="150" height="13" uuid="cc293f5b-2d6d-42f6-8b6e-71c0ab59f6e1"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JMBG:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="118" width="360" height="13" uuid="b5680d44-2644-4a0a-a030-15a6ac6ba5ea"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jmbg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="133" width="150" height="13" uuid="f113186c-c73a-4a79-895a-6e7942cea136"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LBO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="133" width="360" height="13" uuid="8a419667-9423-4f65-a93e-352aba1b7e4b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lbo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="148" width="150" height="13" uuid="9936129d-a16e-4721-91be-b7c2dbff7ff9"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pol:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="148" width="360" height="13" uuid="515ebad8-3c94-4926-bb74-de40ec968d61"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pol}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="163" width="150" height="13" uuid="fe1b7fdb-71cb-4995-998d-d58e4c8d10ac"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Datum rođenja:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="163" width="360" height="13" uuid="64db7cbc-6659-458b-a14f-27fe23fb8909"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{datumRodjenja}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="178" width="150" height="13" uuid="d99bd999-24ff-474a-a336-bf68ca21a481"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="178" width="360" height="13" uuid="1bc805de-0aa7-449d-a53b-2a40acf6dd4c"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="193" width="150" height="13" uuid="6a58f40f-487e-4390-95f2-6b57b75aa4eb"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="193" width="360" height="13" uuid="5423729c-9bf9-4e38-9b92-214d6a39c2b3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="208" width="150" height="13" uuid="f90ec59b-471c-4ed0-8063-634e50d59856"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefon:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="208" width="360" height="13" uuid="24214a4c-066e-4af8-9728-5c2b1e6575d5"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{telefon}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="223" width="150" height="13" uuid="385bb2f4-cd53-487b-ae31-c7624c6af6c9"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Osiguran:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="223" width="360" height="13" uuid="4b885e6f-3c14-40ba-a7e8-c434e4b65ff8"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{osiguran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="248" width="515" height="16" forecolor="#1A3A5C" uuid="219b1f23-f892-4c3c-8778-c30e15074d8b"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZDRAVSTVENI KARTON]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="264" width="515" height="1" uuid="d9fa6065-e7c6-4547-bb47-25eed80d72a3"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="270" width="150" height="13" uuid="df8332e2-c846-4585-8f33-1c03bd9772f1"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Krvna grupa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="270" width="360" height="13" uuid="9b517818-f398-4be3-b632-3f844873b965"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{krvnaGrupa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="285" width="150" height="13" uuid="8279cc4e-fb26-4247-9b30-d8dc0f4a2ecb"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alergije:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="285" width="360" height="13" uuid="483713fb-418c-49e1-bdbf-455af7be6223"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alergije}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="300" width="150" height="13" uuid="48edb684-b63b-4e62-a06c-6c0e2f632d06"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hronični bolesnik:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="300" width="360" height="13" uuid="b959ee3c-1110-40bb-919c-97cc851d4ab2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hronicanBolesnik}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="315" width="150" height="13" uuid="aa840d88-03c7-456e-8423-6caa3b0c49cf"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Napomena:]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="155" y="315" width="360" height="13" uuid="d3fdbe74-fa33-461f-b7cd-5959ea4b3140"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{napomenaKarton}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="340" width="515" height="16" forecolor="#1A3A5C" uuid="1fc019a7-8ee2-4faf-baa9-407aadb18ec5"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISTORIJA PREGLEDA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="356" width="515" height="1" uuid="236c0882-604c-41e4-8c98-5fbe7c323e8c"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="362" width="515" height="160" uuid="d6946316-08fe-438c-88c7-c728b035dc6d"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pregledi} != null ? $P{pregledi} : "Nema pregleda"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="530" width="515" height="16" forecolor="#1A3A5C" uuid="a10b0919-be6a-4f92-b571-b15bf924e9db"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECEPTI]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="546" width="515" height="1" uuid="8efa36e5-9b5e-4861-a3f2-8b2411bc612c"/>
+				<graphicElement>
+					<pen lineColor="#1A3A5C"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="552" width="515" height="160" uuid="16abb3ff-d1b3-4cb7-bdc6-7900b9879288"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{recepti} != null ? $P{recepti} : "Nema recepata"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band/>
+	</detail>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
