@@ -1,6 +1,10 @@
 FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
-COPY . .
+COPY pom.xml .
+COPY BolnicaJPA/pom.xml BolnicaJPA/
+COPY BolnicaJPA/src BolnicaJPA/src
+COPY BolnicaWeb/pom.xml BolnicaWeb/
+COPY BolnicaWeb/src BolnicaWeb/src
 RUN mvn clean package -DskipTests --no-transfer-progress
 
 FROM tomcat:11-jdk21-temurin
