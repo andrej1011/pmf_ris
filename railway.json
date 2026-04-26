@@ -1,6 +1,6 @@
 {
   "build": {
-    "buildCommand": "cd BolnicaWeb && ./mvnw clean package -DskipTests"
+    "buildCommand": "mvn -f BolnicaJPA/pom.xml clean install -DskipTests && mvn -f BolnicaWeb/pom.xml clean package -DskipTests"
   },
   "deploy": {
     "startCommand": "java -jar BolnicaWeb/target/*.jar"
