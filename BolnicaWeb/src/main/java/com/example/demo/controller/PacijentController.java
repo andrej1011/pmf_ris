@@ -27,17 +27,23 @@ public class PacijentController {
 	@Autowired
 	PacijentService pacijentService;
 
+	// ── Pocetna ──────────────────────────────────────────────────
+
 	@GetMapping("pocetna")
 	public String pocetna(Model m) {
 		m.addAttribute("pacijent", pacijentService.trenutniPacijent());
 		return "pacijent/pocetna";
 	}
 
+	// ── Karton ───────────────────────────────────────────────────
+
 	@GetMapping("karton")
 	public String karton(Model m) {
 		m.addAttribute("pacijent", pacijentService.trenutniPacijent());
 		return "pacijent/karton";
 	}
+
+	// ── Recepti ──────────────────────────────────────────────────
 
 	@GetMapping("recepti")
 	public String recepti(Model m) {
@@ -46,6 +52,8 @@ public class PacijentController {
 		m.addAttribute("recepti", pacijentService.getMojeRecepte());
 		return "pacijent/recepti";
 	}
+
+	// ── Pregledi ─────────────────────────────────────────────────
 
 	@GetMapping("prosliPregledi")
 	public String prosliPregledi(Model m) {
@@ -68,6 +76,8 @@ public class PacijentController {
 		m.addAttribute("pregledi", pacijentService.getBuduciPregledi());
 		return "pacijent/buduciPregledi";
 	}
+
+	// ── Zakazivanje ──────────────────────────────────────────────
 
 	@GetMapping("zakazivanje")
 	public String zakazivanje(Model m) {
@@ -116,6 +126,8 @@ public class PacijentController {
 		m.addAttribute("zahtevi", pacijentService.getMojiZahtevi());
 		return "pacijent/mojiZahtevi";
 	}
+
+	// ── GDPR / Podesavanja ────────────────────────────────────────
 
 	@GetMapping("gdpr")
 	public String gdpr(Model m) {

@@ -137,7 +137,6 @@ function otvoriStare(link) {
     window._stariWin = window.open(link.href, 'stariPregledi', 'width=800,height=600,scrollbars=yes');
     window._stariWin.focus();
 }
-
 </script>
 </body>
 </html>

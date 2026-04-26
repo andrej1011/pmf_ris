@@ -46,7 +46,7 @@ public class DoktorController {
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
 	}
 
-	// ── Pocetna ──────────────────────────────────────────────────
+	// ── Početna ──────────────────────────────────────────────────
 
 	@GetMapping("pocetna")
 	public String pocetna(Model m) {
