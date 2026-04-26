@@ -1,0 +1,8 @@
+{
+  "build": {
+    "buildCommand": "mvn -f BolnicaWeb/pom.xml clean package -DskipTests -pl BolnicaWeb -am"
+  },
+  "deploy": {
+    "startCommand": "find /app -name '*.jar' -not -name '*sources*' | head -1 | xargs java -jar"
+  }
+}

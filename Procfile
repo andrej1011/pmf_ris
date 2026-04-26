@@ -1,1 +1,0 @@
-web: find /app -name "*.jar" && java -jar /app/target/BolnicaWeb-0.0.1-SNAPSHOT.jar
