@@ -1,5 +1,0 @@
-{
-  "deploy": {
-    "startCommand": "java -jar BolnicaWeb/target/*.jar"
-  }
-}
